@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(4, 184, 175);
+}
+.botoes{
+display: flex;
+flex-direction: column;
+position:absolute;
+left:50%;
+top:50%;
+margin-left:-200px;
+margin-top:-20px;
+
+}
+.botaoconfig{
+display: flex;
+flex-direction: column-reverse;
+position:absolute;
+left:50%;
+top:50%;
+margin-left:19px;
+margin-top:210px;
+color: rgb(85, 95, 104);
+}
+.titulo{
+    display: flex;
+    flex-direction: column-reverse;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-120px;
+    margin-top:-150px;
+    }
+     
