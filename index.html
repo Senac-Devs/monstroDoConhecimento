@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monstro do Conhecimento</title>
-    <script src="index.js"></script>
     <link rel="stylesheet" href="style.css">
+    <title>HomePage</title>
 </head>
 <body>
-
-<h1>Monstro do Conhecimento</h1>
-<h4> Aprender nunca foi tão divertido</h4>
-<h2>Login</h2>
-<form>
-<select id="Usuario" required>
-    <option value="text">Seu Usuario</option>
-<option value="Professor">Professor</option>
-<option value="Aluno">aluno</option>
-
-</form>
-
-<label>Nome</label>
-<input type="text" id="nome" required />
-<label>senha</label>
-<input type="password" id="senha" required/>
-<input type="button" id="confirma" required/> 
-
-</div>
+    <div class="main-login">
+        <div class="esquerda-login">
+            <h1>Monstro do Conhecimento<br>Venha aprender com a gente!</h1>
+            <img src="dragon-animate.svg" class="esquerda-login-image" alt="monsto-dragao">
+        </div>
+        <div class="direita-login">
+            <div class="cartao-login">
+                <h1>Login</h1>
+                <div class="texto-padrao">
+                    <label for="Usuario">Usuario</label>
+                    <input type="text" name="Usuario" placeholder="Usuario">
+                </div>
+                <div class="texto-padrao">
+                    <label for="Senha">Senha</label>
+                    <input type="password" name="Senha" placeholder="Senha">
+            </div>
+            <button class="btn-login">Login</button>
+        </div>
+    </div>
+    
 </body>
 </html>
