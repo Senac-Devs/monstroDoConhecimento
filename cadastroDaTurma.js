@@ -5,10 +5,28 @@ let   entradaTurma = document.getElementById('turma-classe')
 let   entradaNomeDoAluno = document.getElementById('nome-do-aluno')
 let   entradaRA = document.getElementById('RA')
 let   entradaEmail = document.getElementById('e-mail')
-let   entradaAnotações = document.getElementById('anotações')
+let   entradaAnotacoes = document.getElementById('anotacoes')
 
-//pegar dados e mostrar como teste
+
+/*criar um eventlistener para quando clicar ou mudar para o campo RA
+gerar um número baseado em uma estrutura*/
+
+
+//pegar dados e mostrar como teste no console.log()
 function adicionarAluno(){
-    
+    let anoClasse = entradaAno.value;
+    let turmaClasse = entradaTurma.value;
+    let nomeDoAluno = entradaNomeDoAluno.value;
+    let emailAluno = entradaEmail.value;
+    let anotacoesAluno = entradaAnotacoes.value;
+
+    let aluno = [anoClasse, turmaClasse, nomeDoAluno, emailAluno, anotacoesAluno]
+    console.log(aluno)
+
 }
 
+
+
+function exibirTurma(){
+  //exibir turma na div 'resposta'
+}
