@@ -5,28 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
     <title>HomePage</title>
 </head>
 <body>
+<div class="content">
+    <div class="nes-container">
     <div class="main-login">
         <div class="esquerda-login">
-            <h1>Monstro do Conhecimento<br>Venha aprender com a gente!</h1>
-            <img src="dragon-animate.svg" class="esquerda-login-image" alt="monsto-dragao">
+            <h1>Monstro do Conhecimento<br>Venha aprender com a gente!             <img src="dragon-animate.svg" class="esquerda-login-image" alt="monsto-dragao"></h1>
         </div>
+        </div>
+        </div>
+        <div class="nes-container with-title">
+            <span class="title">Login</span>
         <div class="direita-login">
             <div class="cartao-login">
-                <h1>Login</h1>
+                <label for="default_select">Usuario</label>
+<div class="nes-select">
+  <select required id="default_select">
+    <option value="Selecione" disabled selected hidden>Selecione</option>
+    <option value="0">Aluno</option>
+    <option value="1">Professor</option>
+  </select>
+</div>
                 <div class="texto-padrao">
-                    <label for="Usuario">Usuario</label>
-                    <input type="text" name="Usuario" placeholder="Usuario">
+                    <div class="nes-field">
+                        <label for="name_field">Nome</label>
+                        <input type="text" id="name_field" class="nes-input">
+                      </div>
                 </div>
                 <div class="texto-padrao">
-                    <label for="Senha">Senha</label>
-                    <input type="password" name="Senha" placeholder="Senha">
+                    <div class="nes-field">
+                        <label for="name_field">Senha</label>
+                        <input type="password" id="name_field" class="nes-input">
+                      </div>
+                </div>
+                <button class="nes-btn is-success">Login</button>
             </div>
-            <button class="btn-login">Login</button>
         </div>
     </div>
-    
+    <div class="nes-container with-title">
+        <span class="title">Contato</span>
+        <h3>Contato dos desenvolvedores nos icones a baixo</h3>
+        <a class="nes-btn" href="#">Emails</a>
+        <a class="nes-btn" href="#">Redes sociais</a>
+    </div>
+
+    </div>
+    </div>
+
 </body>
 </html>
