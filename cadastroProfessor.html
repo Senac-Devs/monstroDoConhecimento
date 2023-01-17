@@ -1,30 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monstro do conhecimento/Cadastro professor</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    <header class="Registro">
-        <h1>👾 Registre-se Profemonster 👾</h1>
-    </header>
-    
-    <main>
-        <section class="campos">
-            <input type="text" id="nome" placeholder="Nome"/>
-            <input type="email" id="e-mail" placeholder="Adicione um e-mail"/>
-            <input type="tel" placeholder="Celular"/> 
-            <input type="date" id="dataNasc"/>
-            <input type="text" id="areaEstudo" placeholder="Disciplina"/>
-            <input type="password" id="senha" placeholder="Crie sua senha"/>
-            <input type="submit" value="Confirmar" onclick="salvarInfo()"/>
-        </section>
-    </main>
-</body>
-<footer>
-    <h3>Contatos:</h3>
-</footer>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Monstro do conhecimento/Cadastro professor</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+            rel="stylesheet"
+        />
+        <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+        <link rel="stylesheet" href="cadastro-professor.css" />
+    </head>
+    <header>Monstro do Conhecimento</header>
+    <body>
+        <main>
+            <h1>👾 Registre-se Profemonster 👾</h1>
+            <h2></h2>
+            <section class="campos">
+                <input 
+                    type="text"
+                    id="nome"
+                    class="nes-input"
+                    placeholder="Nome:"
+                />
+                <input
+                    type="email"
+                    class="nes-input"
+                    id="e-mailProfessor"
+                    placeholder="Adicione um e-mail:"
+                />
+                <input type="tel" class="nes-input" placeholder="Celular:" />
+                <input type="date" class="nes-input" id="dataNasc" />
+                <input
+                    type="text"
+                    class="nes-input"
+                    id="areaEstudo"
+                    placeholder="Disciplina:"
+                />
+                <input
+                    type="text"
+                    class="nes-input"
+                    id="senha"
+                    placeholder="Crie seu usuário:"
+                />
+                <input
+                    type="password"
+                    class="nes-input"
+                    id="senha"
+                    placeholder="Crie sua senha:"
+                />
+                <div class="nes-btn" href="#">Cadastrar</a>
+                <input
+                    type="button"
+                    class="nes-btn is-success"
+                    value="Confirmar"
+                    onclick="salvarCadProf()"
+                />
+            </section>
+        </main>
+    </body>
+    <footer>
+        <h3>Contatos:</h3>
+        <section class="icon-list"></section>
+        <i class="nes-icon instagram is-large"></i>
+        <i class="nes-icon gmail is-large"></i>
+        <i class="nes-icon whatsapp is-large"></i>
+    </footer>
 </html>
