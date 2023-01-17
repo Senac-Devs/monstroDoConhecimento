@@ -21,6 +21,7 @@ function adicionarAluno(){
     let anotacoesAluno = entradaAnotacoes.value;
 
     const aluno = new Aluno (nomeDoAluno, geraRA(), emailAluno, anoClasse, turmaClasse, anotacoesAluno)
+    salvarAluno(aluno)
     console.log(aluno)
 
 }
