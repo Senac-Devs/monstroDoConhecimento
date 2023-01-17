@@ -1,6 +1,11 @@
-body{
-    background-color: rgb(4, 184, 175);
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+outline: 0;
 }
+   
+
 .botoes{
 display: flex;
 flex-direction: column;
@@ -11,13 +16,14 @@ margin-left:-200px;
 margin-top:-20px;
 
 }
-.botaoconfig{
+               .botaoconfig{
 display: flex;
-flex-direction: column-reverse;
+flex-direction:column;
 position:absolute;
-left:50%;
-top:50%;
-margin-left:19px;
+align-items: center;
+left:48%;
+top:63%;
+margin-left:50px;
 margin-top:210px;
 color: rgb(85, 95, 104);
 }
@@ -25,9 +31,10 @@ color: rgb(85, 95, 104);
     display: flex;
     flex-direction: column-reverse;
     position:absolute;
+    align-items: center;
     left:50%;
     top:50%;
-    margin-left:-120px;
+    margin-left:-220px;
     margin-top:-150px;
     }
      

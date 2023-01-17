@@ -3,6 +3,14 @@
 <html lang="pt">
   <head>
   <link rel="stylesheet" href="visual.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+
+  <style>
+    html, body, pre, code, kbd, samp {
+        font-family: "font-family you want to use";
+    }
+  </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,12 +24,13 @@
   </div>
 
   <div class="botoes"> 
-  
-    <input type="button" style="width:500px; height: 100px;" value="jogar" onclick="testabotao()">
-    <input type="button" style="width:500px; height: 100px;" value="perfil"onclick="testabotao()" >
+    
+    <button type="button"  style="width:500px; height: 100px;" value="jogar" onclick="testabotao()" class="nes-btn is-warning">Jogar</button>
+    <button type="button"  style="width:500px; height: 100px;" value="perfil" onclick="testabotao()"class="nes-btn is-warning">perfil</button>
+    <button type="button" style="width:500px; height: 100px;" value="seuMonstro"onclick="testabotao()" class="nes-btn is-warning">Seu monstro</button>
      </div>
      <div class="botaoconfig">
-    <input type="image" src="https://cdn-icons-png.flaticon.com/512/3524/3524636.png"height="60" width="70"/ onclick="testabotao()">
+    <input type="image" src="https://cdn-icons-png.flaticon.com/512/3524/3524636.png"height="-150" width="70"/ onclick="testabotao()">
   </div>
 
 </body>
