@@ -1,9 +1,16 @@
+
+* {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
 html {
     font-family: sans-serif;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -ms-overflow-style: scrollbar;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: grey;
 }
 
 @-ms-viewport {
@@ -1133,17 +1140,97 @@ input[type="checkbox"] {
     opacity: 0;
 }
 
+.cartao-principal{
+  width: 100%;
+  height: 50%;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+}
+.cartao-principal2{
+  width: 100%;
+  height: 50%;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+}
+
+
 .nes-container {
-    position: relative;
     padding: 1.5rem 2rem;
     border-color: black;
     border-style: solid;
     border-width: 4px;
+    margin: 0px;
+    padding: 0px;
+
+
 }
+.monsto-dragao{
+  display: flex;
+}
+
+.borda1 {
+  width: 100mm 1mm;
+  border-color: black;
+  margin: 0px;
+  border-width: 6px;
+  background-color: white;
+}
+.borda2 {
+  border-color: gold;
+  width: 89mm 1mm;
+  margin: 0px;
+  border-width: 6px;
+  border-right-width: 10px;
+  padding: 0%;
+}
+.borda3 {
+
+  border-color: rgb(79, 41, 104);
+  width: 88mm 1mm;
+  margin: 0px;
+  border-width: 6px;
+  border-right-width: 55px;
+  border-left-width: 55px;
+  border-top-width: 10px;
+  border-bottom-width: 10px;
+}
+
 
 .nes-container > :last-child {
     margin-bottom: 0;
+
 }
+.cartao1 {
+  width: 50%;
+  height: 25%;
+  margin: 3px;
+  padding: 3px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+}
+.cartao2 {
+  width: 50%;
+  height: 100%;
+  margin: 3px;
+  padding: 3px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.cartao2 > h5{
+  margin: 5px;
+}
+
+
 
 .nes-container.is-centered {
     text-align: center;
@@ -1403,9 +1490,8 @@ input[type="checkbox"] {
     border-image-slice: 2;
     border-image-width: 2;
     border-image-repeat: stretch;
-    border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>');
     border-image-outset: 2;
-    width: 100%;
+    width: 50%;
     height: 48px;
     margin: 4px;
     color: #212529;
@@ -1413,6 +1499,7 @@ input[type="checkbox"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
