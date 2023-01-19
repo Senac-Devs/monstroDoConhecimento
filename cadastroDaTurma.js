@@ -20,7 +20,8 @@ function adicionarAluno(){
     let emailAluno = entradaEmail.value;
     let anotacoesAluno = entradaAnotacoes.value;
 
-    let aluno = [anoClasse, turmaClasse, nomeDoAluno, emailAluno, anotacoesAluno]
+    const aluno = new Aluno (nomeDoAluno, geraRA(), emailAluno, anoClasse, turmaClasse, anotacoesAluno)
+    salvarAluno(aluno)
     console.log(aluno)
 
 }
@@ -29,4 +30,8 @@ function adicionarAluno(){
 
 function exibirTurma(){
   //exibir turma na div 'resposta'
+}
+
+function geraRA(){
+  return 2
 }
