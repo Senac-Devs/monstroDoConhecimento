@@ -24,7 +24,7 @@ function adicionarAluno(){
     const aluno = new Aluno (nomeDoAluno, geraRA(), emailAluno, anoClasse, turmaClasse, anotacoesAluno)
     salvarAluno(aluno)
     console.log(aluno)
-    retorno.innerHTML = `O(A) estudante ${aluno.nomeDoAluno} foi adicionado(a) à turma ${aluno.anoClasse} ${aluno.turmaClasse}.`
+    retorno.innerHTML = `O(A) estudante ${aluno.nome} foi adicionado(a) à turma ${aluno.ano} ${aluno.turma}.`
 }
 
 function geraRA(){

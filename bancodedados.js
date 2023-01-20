@@ -11,6 +11,7 @@ function salvarAluno(aluno) {
         ]);
     });
     //validacao?
+    //alunos com o exato mesmo nome.
     document.getElementById("ano-classe").value = "";
     document.getElementById("turma-classe").value = "";
     document.getElementById("nome-do-aluno").value = "";
@@ -36,16 +37,27 @@ function exibirTurma() {
                     item = resultados.rows.item(i);
                     const aluno = JSON.parse(item.infos);
                     if (aluno.ano == ano && aluno.turma == turma){
-                        exibeAlunoHMTL(aluno)
+                        guardaAlunoLista(aluno)
                     }
                 }
+                exibeOrdemAlfabetica()
             }
         );
     });
 }
+let alunosFiltrados = []
+function guardaAlunoLista(aluno){
+    alunosFiltrados.push(aluno)
+}
+
+function exibeOrdemAlfabetica(){
+    alunosFiltrados.sort((a,b) => (a.nome < b.nome ? -1 : 1) )
+    alunosFiltrados.forEach(e => exibeAlunoHMTL(e))
+    alunosFiltrados = []
+}
 
 function exibeAlunoHMTL(aluno){
-    document.getElementById('turmas').innerHTML += `<p>${aluno.nome}</p>`
+    document.getElementById('turmas').innerHTML += `<p><strong>Nome</strong>: ${aluno.nome} <strong>RA</strong>: ${aluno.RA} <strong>email</strong>: ${aluno.email} <strong>Anotações</strong>: ${aluno.anotacoes} </p>`
 }
 
 
