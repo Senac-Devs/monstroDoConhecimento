@@ -22,7 +22,6 @@ function salvarAluno(aluno) {
 
 function exibirTurma() {
     const [ano, turma] = document.getElementById('turmas-lista').value.split("º - ")
-    console.log(ano, turma)
     carregaAnoTurma();
     bancoDados.transaction(function (exibe) {
         exibe.executeSql(
