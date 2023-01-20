@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Monstro do conhecimento/Cadastro professor</title>
+        <script src="cadProfessor.js"></script>
         <link
             href="https://fonts.googleapis.com/css?family=Press+Start+2P"
             rel="stylesheet"
@@ -18,36 +19,36 @@
             <h1>👾 Registre-se Profemonster 👾</h1>
             <h2></h2>
             <section class="campos">
-                <input 
+                <input
                     type="text"
-                    id="nome"
+                    id="nome-prof"
                     class="nes-input"
                     placeholder="Nome:"
                 />
                 <input
                     type="email"
                     class="nes-input"
-                    id="e-mailProfessor"
+                    id="email-prof"
                     placeholder="Adicione um e-mail:"
                 />
-                <input type="tel" class="nes-input" placeholder="Celular:" />
-                <input type="date" class="nes-input" id="dataNasc" />
+                <input type="tel" id="telefone-prof" class="nes-input" placeholder="Celular:" />
+                <input type="date" id="data-nasc-prof" class="nes-input" id="dataNasc" />
                 <input
                     type="text"
                     class="nes-input"
-                    id="areaEstudo"
+                    id="area-estudo"
                     placeholder="Disciplina:"
                 />
                 <input
                     type="text"
                     class="nes-input"
-                    id="senha"
+                    id="usuario-prof"
                     placeholder="Crie seu usuário:"
                 />
                 <input
                     type="password"
                     class="nes-input"
-                    id="senha"
+                    id="senha-prof"
                     placeholder="Crie sua senha:"
                 />
                 <div class="nes-btn" href="#">Cadastrar</a>
@@ -58,13 +59,17 @@
                     onclick="salvarCadProf()"
                 />
             </section>
+
+            <section class="nes-btn" href="#">Voltar</a>
+                <input type="button" class="nes-btn is-error" value="Confirmar" onclick="throwback()"/>                
+            </section>
         </main>
     </body>
     <footer>
         <h3>Contatos:</h3>
         <section class="icon-list"></section>
-        <i class="nes-icon instagram is-large"></i>
-        <i class="nes-icon gmail is-large"></i>
-        <i class="nes-icon whatsapp is-large"></i>
+        <i class="nes-icon instagram is-medium"></i>
+        <i class="nes-icon gmail is-medium"></i>
+        <i class="nes-icon whatsapp is-medium"></i>
     </footer>
 </html>
