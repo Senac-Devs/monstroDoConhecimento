@@ -8,5 +8,4 @@ function salvarCadProf() {
     const usuarioProf = document.getElementById("usuario-prof").value;
     const senhaProf = document.getElementById("senha-prof").value;
 
-    
 }
