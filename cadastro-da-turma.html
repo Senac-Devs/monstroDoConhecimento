@@ -9,7 +9,7 @@
 <body>
     <main> 
         <section>    
-            <h3>Cadastro da Turma</h3>
+            <h3>Cadastro da Turma e Aluno</h3>
                 <div> 
                     <label for="ano-classe">Ano</label>
                     <input type="text" id="ano-classe" placeholder="2º."> 
@@ -32,20 +32,22 @@
                     <button onclick="adicionarAluno()">Adicionar Aluno</button>
                     <button onclick="corrigirCadastroAluno()">Corrigir Cadastro</button>
                 </div>
+                <div id="retorno"></div>
         </section>
         <section>          
             <h3>Turmas Cadastrada</h3>
                 <!-- O professor seleciona a turma e clicaria para exibir a turma com todos os alunos cadastrados-->
                 <div id="">
                     <label for="turmas">Escolha a turma</label>
-                    <select name="turmas" id="turmas" placeholder="Turma A 2022" required>
+                    <select name="turmas" id="turmas-lista" placeholder="Turma A 2022" required>
                         <option value="">Turma Teste</option>
                     </select>
                 </div>
                 <div> 
                     <button onclick="exibirTurma()">Exibir Turma</button>
+                    <p id=""></p>
                 </div>
-                <div id="resposta">
+                <div id="turmas">
 
                 </div>
         </section>
