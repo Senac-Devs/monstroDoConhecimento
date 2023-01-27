@@ -11,17 +11,19 @@ let retorno = document.getElementById("retorno");
 /*criar um eventlistener para quando clicar ou mudar para o campo RA
 gerar um número baseado em uma estrutura*/
 
-
 function adicionarAluno() {
+    
     let anoClasse = entradaAno.value;
     let turmaClasse = entradaTurma.value;
     let nomeDoAluno = entradaNomeDoAluno.value;
     let emailAluno = entradaEmail.value;
     let anotacoesAluno = entradaAnotacoes.value;
-
+    if(anoClasse == '' || turmaClasse == '' || nomeDoAluno == ''|| emailAluno == ''){
+        alert('Faltam dados essenciais. Preencha-os para os campos ano, turma, aluno e e-mail para prosseguir.')
+    } else { 
     const aluno = new Aluno(
         nomeDoAluno,
-        geraRA(),
+        entradaRA.value,
         emailAluno,
         anoClasse,
         turmaClasse,
@@ -29,10 +31,8 @@ function adicionarAluno() {
     );
     salvarAluno(aluno);
     retorno.innerHTML = `O(A) estudante ${aluno.nome} foi adicionado(a) à turma ${aluno.ano} ${aluno.turma}.`;
-}
-
-
-function atualizaNumeroRA() {
+}}
+function geraRA() {
     bancoDados.transaction(function (exibe) {
         exibe.executeSql(
             "SELECT * FROM alunos",
@@ -53,7 +53,7 @@ function atualizaNumeroRA() {
         );
     });
 }
-atualizaNumeroRA();
+geraRA();
 
 function AddTurmas() {
     const lista = document.getElementById("turmas-lista");

@@ -12,7 +12,7 @@
             <h3>Cadastro da Turma e Aluno</h3>
                 <div> 
                     <label for="ano-classe">Ano</label>
-                    <input type="text" id="ano-classe" placeholder="2º."> 
+                    <input type="text" id="ano-classe" placeholder="2"> 
                     <label for="turma-classe">Turma</label>
                     <input type="text" id="turma-classe" placeholder="B">
                 </div>
@@ -29,7 +29,7 @@
                     <input name="anotacoes" id="anotacoes" placeholder="Diagonosticado com...">
                 </div>
                 <div> 
-                    <button onclick="adicionarAluno()">Adicionar Aluno</button>
+                    <button onclick="inserirAlunoBD()">Adicionar Aluno</button>
                     <button onclick="corrigirCadastroAluno()">Corrigir Cadastro</button>
                 </div>
                 <div id="retorno"></div>
@@ -50,7 +50,9 @@
                 <div id="turmas">
 
                 </div>
-                <a class="nes-btn" href="./menu-inicial.html">Voltar</a>
+                <div> 
+                <button><a class="nes-btn" href="./menu-inicial.html">Voltar</a></button>
+                </div>
         </section>
              
     </main>
