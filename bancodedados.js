@@ -4,6 +4,10 @@ bancoDados.transaction(function (criar) {
     criar.executeSql("CREATE TABLE alunos (infos JSON)");
 });
 
+bancoDados.transaction(function (criar) {
+    criar.executeSql("CREATE TABLE perguntas (enunciado TEXT, alternativaCorreta TEXT, alternaticaErrada1 TEXT,alternaticaErrada2 TEXT, alternaticaErrada3 TEXT, palavraChave TEXT, tema TEXT)");
+});
+
 function salvarAluno(aluno) {
     bancoDados.transaction(function (inserir) {
         inserir.executeSql("INSERT INTO alunos (infos) VALUES (?)", [
