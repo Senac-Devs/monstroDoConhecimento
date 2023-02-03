@@ -1,63 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro da Turma</title>
-    <link rel="stylesheet" href="cadastro-da-turma.css">
-</head>
-<body>
-    <main> 
-        <section>    
-            <h3>Cadastro da Turma e Aluno</h3>
-                <div> 
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cadastro da Turma</title>
+        <link rel="stylesheet" href="cadastro-da-turma.css" />
+    </head>
+    <body>
+        <main>
+            <section>
+                <h3>Cadastro da Turma e Aluno</h3>
+                <div>
                     <label for="ano-classe">Ano</label>
                     <input type="text" id="ano-classe" placeholder="2"> 
                     <label for="turma-classe">Turma</label>
-                    <input type="text" id="turma-classe" placeholder="B">
+                    <input type="text" id="turma-classe" placeholder="B" />
                 </div>
-            <h4>Alunos</h4>
-                <div> 
+                <h4>Alunos</h4>
+                <div>
                     <label for="nome-do-aluno">Nome do aluno</label>
-                    <input type="text" id="nome-do-aluno" placeholder="Jorge de Jorge" required>
+                    <input
+                        type="text"
+                        id="nome-do-aluno"
+                        placeholder="Jorge de Jorge"
+                        required
+                    />
                     <label for="RA">RA</label>
-                    <input type="text" id="RA">
+                    <input type="text" id="RA" />
                     <label for="e-mail">E-mail</label>
-                    <input type="email" id="e-mail" placeholder="jorge@jorge.com"  required>
+                    <input
+                        type="email"
+                        id="e-mail"
+                        placeholder="jorge@jorge.com"
+                        required
+                    />
                     <!-- problemas com o tamanho e alinhamento do campo anotações (tag textarea) -->
                     <label for="anotacoes">Anotações</label>
-                    <input name="anotacoes" id="anotacoes" placeholder="Diagonosticado com...">
+                    <input
+                        name="anotacoes"
+                        id="anotacoes"
+                        placeholder="Diagonosticado com..."
+                    />
                 </div>
-                <div> 
-                    <button onclick="inserirAlunoBD()">Adicionar Aluno</button>
-                    <button onclick="corrigirCadastroAluno()">Corrigir Cadastro</button>
+                <div>
+                    <button onclick="adicionarAluno()">Adicionar Aluno</button>
+                    <button onclick="corrigirCadastroAluno()">
+                        Corrigir Cadastro
+                    </button>
                 </div>
                 <div id="retorno"></div>
-        </section>
-        <section>          
-            <h3>Turmas Cadastrada</h3>
+            </section>
+            <section>
+                <h3>Turmas Cadastrada</h3>
                 <!-- O professor seleciona a turma e clicaria para exibir a turma com todos os alunos cadastrados-->
                 <div id="">
                     <label for="turmas">Escolha a turma</label>
-                    <select name="turmas" id="turmas-lista" placeholder="Turma A 2022" required>
+                    <select
+                        name="turmas"
+                        id="turmas-lista"
+                        placeholder="Turma A 2022"
+                        required
+                    >
                         <option value="">Turma Teste</option>
                     </select>
                 </div>
-                <div> 
+                <div>
                     <button onclick="exibirTurma()">Exibir Turma</button>
                     <p id=""></p>
                 </div>
-                <div id="turmas">
-
-                </div>
-                <div> 
-                <button><a class="nes-btn" href="./menu-inicial.html">Voltar</a></button>
-                </div>
-        </section>
-             
-    </main>
-    <script src="./estruturaClasseAluno.js"></script>
-    <script src="./bancodedados.js"></script>
-    <script src="./cadastroDaTurma.js"></script>
-</body>
+                <div id="turmas"></div>
+                <a class="nes-btn" href="./menu-inicial.html">Voltar</a>
+            </section>
+        </main>
+        <script src="./estruturaClasseAluno.js"></script>
+        <script src="./bancodedados.js"></script>
+        <script src="./cadastroDaTurma.js"></script>
+    </body>
 </html>

@@ -5,32 +5,121 @@
 
         <title>Mostro do Conhecimento</title>
         <script drc="cadastroDePerguntas.js"></script>
-        <link rel="stylesheet" href="cadastro-pergunta.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/nes.css" />
+        <link rel="stylesheet" href="./css/cadastro-pergunta.css" />
+        <script src="./bancodedados.js"></script>
+        <script src="./cadastroDePregunta.js"></script>
     </head>
     <body>
-        <header>
-            <h1>Mostro DO Conhecimento</h1>
-        </header>
-        <main>
-            <section>
-                <h2>Cadastro de Perguntas</h2>
-                <input
-                    type="text"
-                    placeholder="cadastrar perguntas"
-                    id="perguntas"
-                />
+        <div class="content">
+            <div class="nes-container with-title borda1">
+                <div class="nes-container with-title borda2">
+                    <div class="nes-container with-title borda3">
+                        <div class="main-central">
+                            <h1>Mostro do Conhecimento</h1>
+                            <h2>Pergunta a ser cadastrada</h2>
+                            <div class="main-central">
+                                <textarea
+                                    id="cadastro-de-pergunta"
+                                    class="cadrasto-de-pergunta"
+                                    placeholder="Qual é a pergunta?"
+                                ></textarea>
+                                <div class="Alternativas">
+                                    <label for="inline_field"></label>
+                                    <input
+                                        type="text"
+                                        id="alternativa-certa"
+                                        class="nes-input is-success"
+                                        placeholder="alternatica certa"
+                                    />
+                                    <label for="error_field"></label>
 
-                <h2>Cadastro de Respostas</h2>
-                <input type="text" />
+                                    <input
+                                        type="text"
+                                        id="alternativa-errada1"
+                                        class="nes-input is-error"
+                                        placeholder="Altenativa errada"
+                                    />
 
-                <input type="button" value="salvar!" placeholder="salvar!" />
-                <input type="button" value="editar" placeholder="editar" />
+                                    <label for="error_field"></label>
+                                    <input
+                                        type="text"
+                                        id="alternativa-errada2"
+                                        class="nes-input is-error"
+                                        placeholder="Altenativa errada"
+                                    />
 
-                <section>
-                    <h2>Exibe Perguntas</h2>
-                </section>
-            </section>
-            <a class="nes-btn" href="./menu-inicial.html">Voltar</a>
-        </main>
+                                    <label for="error_field"></label>
+                                    <input
+                                        type="text"
+                                        id="alternativa-errada3"
+                                        class="nes-input is-error"
+                                        placeholder="Altenativa errada"
+                                    />
+                                </div>
+
+                                <h2>Cadastrar sua Pergunta</h2>
+                                <input
+                                    id="palavraChave"
+                                    type="text"
+                                    placeholder="Palavras chaves"
+                                />
+
+                                <div class="tema-pergunta">
+                                    <h3>Tema da Pergunta</h3>
+                                    <select required id="temapergunta">
+                                        <option
+                                            value=""
+                                            disabled
+                                            selected
+                                            hidden
+                                        >
+                                            Qual o tema da pergunta?
+                                        </option>
+                                        <option value="Matematica">Matematica</option>
+                                        <option value="Portugues">Portugues</option>
+                                        <option value="Historia">Historia</option>
+                                        <option value="Geografia">Geografia</option>
+                                        <option value="Ciencia">Ciencia</option>
+                                        <option value="Conhecimentos Gerais">
+                                            Conhecimentos Gerais
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <button
+                                    onclick="salvarPergunta()"
+                                    type="button"
+                                    class="nes-btn is-success"
+                                >
+                                    Salvar
+                                </button>
+                                <button
+                                    type="button"
+                                    class="nes-btn is-warning"
+                                >
+                                    Editar
+                                </button>
+                                <button type="button" class="nes-btn is-error">
+                                    Excluir
+                                </button>
+
+                                <div class="voltar">
+                                    <a
+                                        class="nes-btn"
+                                        href="./menu-inicial.html"
+                                        >Voltar</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

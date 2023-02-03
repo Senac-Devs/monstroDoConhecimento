@@ -3,6 +3,9 @@ const bancoDados = openDatabase("meuBD", "1.0", "Meu banco de dados", 4080);
 bancoDados.transaction(function (criar) {
     criar.executeSql("CREATE TABLE alunos (infos JSON)");
 });
+bancoDados.transaction(function (criar) {
+    criar.executeSql("CREATE TABLE perguntas (enunciado TEXT, alternativaCorreta TEXT, alternaticaErrada1 TEXT,alternaticaErrada2 TEXT, alternaticaErrada3 TEXT, palavraChave TEXT, tema TEXT)");
+});
 
 function inserirAlunoBD() {
     let alunoParaInserir = document.getElementById("nome-do-aluno").value;
@@ -133,3 +136,4 @@ function carregaAnoTurma() {
         );
     });
 }
+
