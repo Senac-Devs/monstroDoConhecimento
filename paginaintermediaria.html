@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link
+        href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+        rel="stylesheet"
+    />
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Monstro do Conhecimento</title>
+        <link rel="stylesheet" href="./css/nes.css" />
+        <link rel="stylesheet" href="./css/paginaintermediaria.css" />
+    </head>
+    <body>
+        <div class="content">
+            <div class="nes-container with-title borda1">
+                <div class="nes-container with-title borda2">
+                    <div class="nes-container with-title borda3">
+                        <div class="telatotal">
+                            <div class="baloesconversa">
+                                <p class="nes-balloon from-left nes-pointer">
+                                    Muito bom ver voce por aqui amigo, vamos
+                                    jogar?
+                                    Escolha qual o tema das perguntas voce quer
+                                    responder.
+                                </p>
+                                <img
+                                src="./imagens/banana3.png"
+                                class="esquerda-imagem"
+                            />
+                            <div class="main-central">
+                                <h5>Vida</h5>
+                                <progress
+                                    class="nes-progress is-error vida"
+                                    value="40"
+                                    max="100"
+                                ></progress>
+                                <h5>Humor</h5>
+                                <progress
+                                    class="nes-progress is-success humor"
+                                    value="80"
+                                    max="100"
+                                >
+                                    Humor
+                                </progress>
+                                <h5>Experiencia</h5>
+                                <progress
+                                    class="nes-progress is-primary"
+                                    value="80"
+                                    max="100"
+                                ></progress>
+                            </div>
+                            </div>
+                            <div class="botoespergunta">
+                                <section class="botaotema">
+                                    <button
+                                        type="button"
+                                        class="nes-btn is-primary"
+                                        onclick="document.getElementById('dialog-dark-rounded').showModal();"
+                                    >
+                                        Matematica
+                                    </button>
+                                    <dialog
+                                        class="nes-dialog is-dark is-rounded"
+                                        id="dialog-dark-rounded"
+                                    >
+                                        <form method="dialog">
+                                            <p class="title">
+                                                Voce quer responder questoes de
+                                                matematica?
+                                            </p>
+                                            <p></p>
+                                            <menu class="dialog-menu">
+                                                <button class="nes-btn">
+                                                    Não!
+                                                </button>
+                                                <button
+                                                    class="nes-btn is-primary"
+                                                >
+                                                    Quero responder!
+                                                </button>
+                                            </menu>
+                                        </form>
+                                    </dialog>
+                                </section>
+                                <section class="botaotema">
+                                    <button
+                                        type="button"
+                                        class="nes-btn is-primary"
+                                        onclick="document.getElementById('dialog-dark-rounded').showModal();"
+                                    >
+                                        Portugues
+                                    </button>
+                                    <dialog
+                                        class="nes-dialog is-dark is-rounded"
+                                        id="dialog-dark-rounded"
+                                    >
+                                        <form method="dialog">
+                                            <p class="title">
+                                                Voce quer responder questoes de
+                                                Portugues?
+                                            </p>
+                                            <p></p>
+                                            <menu class="dialog-menu">
+                                                <button class="nes-btn">
+                                                    Não!
+                                                </button>
+                                                <button
+                                                    class="nes-btn is-primary"
+                                                >
+                                                    Quero responder!
+                                                </button>
+                                            </menu>
+                                        </form>
+                                    </dialog>
+                                </section>
+                                <section class="botaotema">
+                                    <button
+                                        type="button"
+                                        class="nes-btn is-primary"
+                                        onclick="document.getElementById('dialog-dark-rounded').showModal();"
+                                    >
+                                        Historia
+                                    </button>
+                                    <dialog
+                                        class="nes-dialog is-dark is-rounded"
+                                        id="dialog-dark-rounded"
+                                    >
+                                        <form method="dialog">
+                                            <p class="title">
+                                                Voce quer responder questoes de
+                                                Historia?
+                                            </p>
+                                            <p></p>
+                                            <menu class="dialog-menu">
+                                                <button class="nes-btn">
+                                                    Não!
+                                                </button>
+                                                <button
+                                                    class="nes-btn is-primary"
+                                                >
+                                                    Quero responder!
+                                                </button>
+                                            </menu>
+                                        </form>
+                                    </dialog>
+                                </section>
+                                <section class="botaotema">
+                                    <button
+                                        type="button"
+                                        class="nes-btn is-primary"
+                                        onclick="document.getElementById('dialog-dark-rounded').showModal();"
+                                    >
+                                        Geografia
+                                    </button>
+                                    <dialog
+                                        class="nes-dialog is-dark is-rounded"
+                                        id="dialog-dark-rounded"
+                                    >
+                                        <form method="dialog">
+                                            <p class="title">
+                                                Voce quer responder questoes de
+                                                Geografia?
+                                            </p>
+                                            <p></p>
+                                            <menu class="dialog-menu">
+                                                <button class="nes-btn">
+                                                    Não!
+                                                </button>
+                                                <button
+                                                    class="nes-btn is-primary"
+                                                >
+                                                    Quero responder!
+                                                </button>
+                                            </menu>
+                                        </form>
+                                    </dialog>
+                                </section>
+                                <section class="botaotema">
+                                    <button
+                                        type="button"
+                                        class="nes-btn is-primary"
+                                        onclick="document.getElementById('dialog-dark-rounded').showModal();"
+                                    >
+                                        Ciencia
+                                    </button>
+                                    <dialog
+                                        class="nes-dialog is-dark is-rounded"
+                                        id="dialog-dark-rounded"
+                                    >
+                                        <form method="dialog">
+                                            <p class="title">
+                                                Voce quer responder questoes de
+                                                Ciencia?
+                                            </p>
+                                            <p></p>
+                                            <menu class="dialog-menu">
+                                                <button class="nes-btn">
+                                                    Não!
+                                                </button>
+                                                <button
+                                                    class="nes-btn is-primary"
+                                                >
+                                                    Quero responder!
+                                                </button>
+                                            </menu>
+                                        </form>
+                                    </dialog>
+                                </section>
+                                <section class="botaotema">
+                                    <button
+                                        type="button"
+                                        class="nes-btn is-primary"
+                                        onclick="document.getElementById('dialog-dark-rounded').showModal();"
+                                    >
+                                        Conhecimentos Gerais
+                                    </button>
+                                    <dialog
+                                        class="nes-dialog is-dark is-rounded"
+                                        id="dialog-dark-rounded"
+                                    >
+                                        <form method="dialog">
+                                            <p class="title">
+                                                Voce quer responder questoes de
+                                                Conhecimento Gerais?
+                                            </p>
+                                            <p></p>
+                                            <menu class="dialog-menu">
+                                                <button class="nes-btn">
+                                                    Não!
+                                                </button>
+                                                <button
+                                                    class="nes-btn is-primary"
+                                                >
+                                                    Quero responder!
+                                                </button>
+                                            </menu>
+                                        </form>
+                                    </dialog>
+                                    <div class="voltar">
+                                        <a
+                                            class="nes-btn"
+                                            href="./menu-inicial.html"
+                                            >Voltar</a
+                                        >
+                                </section>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
