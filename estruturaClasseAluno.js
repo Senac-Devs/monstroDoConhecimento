@@ -8,3 +8,15 @@ class Aluno {
         this.turma = _turma;
     }
 }
+
+class Questao {
+    constructor(_enunciado, _alternativas, _palavrasChave, _tema){
+        this.enunciado = _enunciado;
+        this.alternativaCorreta = _alternativas.alternativaCorreta;
+        this.alternativaErrada1 = _alternativas.alternativaErrada1;
+        this.alternativaErrada2 = _alternativas.alternativaErrada2;
+        this.alternativaErrada3 = _alternativas.alternativaErrada3;
+        this.palavrasChave = _palavrasChave
+        this.tema = _tema;
+    }
+}
