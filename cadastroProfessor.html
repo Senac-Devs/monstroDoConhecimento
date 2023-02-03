@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Monstro do conhecimento/Cadastro professor</title>
-        <script src="cadProfessor.js"></script>
+        <script src="bancodedados.js"></script>
         <link
             href="https://fonts.googleapis.com/css?family=Press+Start+2P"
             rel="stylesheet"
@@ -50,18 +50,12 @@
                     class="nes-input"
                     id="senha-prof"
                     placeholder="Crie sua senha:"
-                />
-                <div class="nes-btn" href="#">Cadastrar</a>
-                <input
-                    type="button"
-                    class="nes-btn is-success"
-                    value="Confirmar"
-                    onclick="salvarCadProf()"
-                />
-            </section>
-
-            <section class="nes-btn" href="#">Voltar</a>
-                <input type="button" class="nes-btn is-error" value="Confirmar" onclick="throwback()"/>                
+                    />
+                </section>
+                
+                <section>
+                <a type="button" class="nes-btn is-success" href="./menu-inicial.html" onclick="salvarCadProf()" >Cadastrar</a>
+                <a type="button" class="nes-btn is-error" href="./index.html" onclick="throwback()" >Voltar</a>    
             </section>
         </main>
     </body>
