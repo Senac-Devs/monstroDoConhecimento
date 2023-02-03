@@ -15,6 +15,20 @@ function salvarPergunta() {
     const elementoTema = document.getElementById("temapergunta");
     const temaPergunta = elementoTema.options[elementoTema.selectedIndex].value;
 
+    if (
+        enunciado === "" ||
+        alternativaCorreta === "" ||
+        alternaticaErrada1 === "" ||
+        temaPergunta === ""
+    ) {
+        alert(
+            "Faltam informações essenciais. Preencha corretamente os campos de pergunta e de tema da pergunta para prosseguir!"
+        );
+        return false
+    } else {
+        salvarPergunta()
+    }
+
     bancoDados.transaction(function (inserir) {
         inserir.executeSql(
             "INSERT INTO perguntas (enunciado, alternativaCorreta, alternaticaErrada1, alternaticaErrada2, alternaticaErrada3, palavraChave, tema) VALUES (?  ,?  ,?  ,?  ,?  ,?  ,? )",
