@@ -35,3 +35,10 @@ button{
 #RA{
     width: 100px;
 }
+
+a, a:visited{
+    text-decoration: none;
+    color: black;
+    cursor: context-menu;
+}
+
