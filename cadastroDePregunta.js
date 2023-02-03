@@ -29,5 +29,11 @@ function salvarPergunta() {
             ]
         );
     });
-    document.getElementById("cadastro-de-pergunta").innerHTML = "";
+    document.getElementById("cadastro-de-pergunta").value = "";
+    document.getElementById("alternativa-certa").value = "";
+    document.getElementById("alternativa-errada1").value = "";
+    document.getElementById("alternativa-errada2").value = "";
+    document.getElementById("alternativa-errada3").value = "";
+    document.getElementById("palavraChave").value = "";
+    document.getElementById("temapergunta").value = "";
 }
