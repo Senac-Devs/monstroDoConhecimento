@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="icon" href="images/favicon.png" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Jogando</title>
+        <link rel="stylesheet" href="nes.css" />
+        <link rel="stylesheet" href="quiz.css" />
+    </head>
+    <body>
+        <div class="content">
+            <div class="nes-container with-title borda1">
+                <div class="nes-container with-title borda2">
+                    <div class="nes-container with-title borda3">
+                        <main class="tela-principal">
+                            <section class="conteudos">
+                                <h1>Testando conhecimento</h1>
+
+                                <article class="centro" id="instrucoes">
+                                    Leia a questão e clique na resposta correta
+                                </article>
+
+                                <article class="questoes">
+                                    <header class="questao">
+                                        <span id="numQuestao"></span>
+                                        <h2 id="pergunta"></h2>
+                                    </header>
+
+                                    <div class="corpo">
+                                        <ol type="A" id="alternativas">
+                                            <li
+                                                id="a"
+                                                value="1A"
+                                                class="respostas"
+                                                onClick="verificarSeAcertou(this, this)"
+                                            ></li>
+                                            <li
+                                                id="b"
+                                                value="1B"
+                                                class="respostas"
+                                                onClick="verificarSeAcertou(this, this)"
+                                            ></li>
+                                            <li
+                                                id="c"
+                                                value="1C"
+                                                class="respostas"
+                                                onClick="verificarSeAcertou(this, this)"
+                                            ></li>
+                                            <li
+                                                id="d"
+                                                value="1D"
+                                                class="respostas"
+                                                onClick="verificarSeAcertou(this, this)"
+                                            ></li>
+                                        </ol>
+                                    </div>
+                                </article>
+                            </section>
+                        </main>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="avisofinal">
+            <!-- <span id="numero"></span> de
+            <span id="total"></span> -->
+            <a class="nes-btn" href="./menu-inicial.html">Voltar</a>
+        </div>
+        <!-- JS externo -->
+    </body>
+</html>
+<script src="quizz.js"></script>
