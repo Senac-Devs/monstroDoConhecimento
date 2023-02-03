@@ -11,6 +11,8 @@
         />
         <link rel="stylesheet" href="./css/nes.css" />
         <link rel="stylesheet" href="./css/cadastro-pergunta.css" />
+        <script src="./bancodedados.js"></script>
+        <script src="./cadastroDePregunta.js"></script>
     </head>
     <body>
         <div class="content">
@@ -28,31 +30,48 @@
                                 ></textarea>
                                 <div class="Alternativas">
                                     <label for="inline_field"></label>
-                                    <input type="text" id="alternativa-certa0" class="nes-input is-success" placeholder="alternatica certa">
+                                    <input
+                                        type="text"
+                                        id="alternativa-certa"
+                                        class="nes-input is-success"
+                                        placeholder="alternatica certa"
+                                    />
                                     <label for="error_field"></label>
-                                    
-                                    <input type="text" id="alternativa-errada1" class="nes-input is-error" placeholder="Altenativa errada">
-                                    
-                                    
+
+                                    <input
+                                        type="text"
+                                        id="alternativa-errada1"
+                                        class="nes-input is-error"
+                                        placeholder="Altenativa errada"
+                                    />
+
                                     <label for="error_field"></label>
-                                    <input type="text" id="alternativa-errada2" class="nes-input is-error" placeholder="Altenativa errada">
-                                    
-                                    
+                                    <input
+                                        type="text"
+                                        id="alternativa-errada2"
+                                        class="nes-input is-error"
+                                        placeholder="Altenativa errada"
+                                    />
+
                                     <label for="error_field"></label>
-                                    <input type="text" id="alternativa-errada3" class="nes-input is-error" placeholder="Altenativa errada">
+                                    <input
+                                        type="text"
+                                        id="alternativa-errada3"
+                                        class="nes-input is-error"
+                                        placeholder="Altenativa errada"
+                                    />
                                 </div>
-
-
 
                                 <h2>Cadastrar sua Pergunta</h2>
                                 <input
+                                    id="palavraChave"
                                     type="text"
                                     placeholder="Palavras chaves"
                                 />
 
                                 <div class="tema-pergunta">
                                     <h3>Tema da Pergunta</h3>
-                                    <select required id="tema-pergunta">
+                                    <select required id="temapergunta">
                                         <option
                                             value=""
                                             disabled
@@ -61,18 +80,19 @@
                                         >
                                             Qual o tema da pergunta?
                                         </option>
-                                        <option value="0">Matematica</option>
-                                        <option value="1">Portugues</option>
-                                        <option value="2">Historia</option>
-                                        <option value="3">Geografia</option>
-                                        <option value="4">Ciencia</option>
-                                        <option value="5">
+                                        <option value="Matematica">Matematica</option>
+                                        <option value="Portugues">Portugues</option>
+                                        <option value="Historia">Historia</option>
+                                        <option value="Geografia">Geografia</option>
+                                        <option value="Ciencia">Ciencia</option>
+                                        <option value="Conhecimentos Gerais">
                                             Conhecimentos Gerais
                                         </option>
                                     </select>
                                 </div>
 
                                 <button
+                                    onclick="salvarPergunta()"
                                     type="button"
                                     class="nes-btn is-success"
                                 >
@@ -88,7 +108,6 @@
                                     Excluir
                                 </button>
 
-                                
                                 <div class="voltar">
                                     <a
                                         class="nes-btn"
