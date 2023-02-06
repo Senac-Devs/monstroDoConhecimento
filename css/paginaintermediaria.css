@@ -43,7 +43,6 @@ body {
 .content div {
     height: auto;
     margin: 0px;
-    padding: 0px;
 }
 
 .nes-container.with-title > .title {
@@ -90,10 +89,14 @@ h1 {
     flex-direction: row-reverse;
 }
 .botoespergunta {
+
     margin-top: 50px;
     align-items: flex-start;
+
 }
 .botaotema {
+    margin-top: 20px;
+    height: 80px ;
     margin-right: 100mm;
 }
 @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
@@ -125,3 +128,4 @@ h1 {
     -moz-appearance: none;
     appearance: none;
 }
+

@@ -4,74 +4,149 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Cadastro da Turma</title>
-        <link rel="stylesheet" href="cadastro-da-turma.css" />
+        <link rel="stylesheet" href="./css/nes.css" />
+        <link rel="stylesheet" href="./css/cadastro-da-turma.css" />
     </head>
     <body>
-        <main>
-            <section>
-                <h3>Cadastro da Turma e Aluno</h3>
-                <div>
-                    <label for="ano-classe">Ano</label>
-                    <input type="text" id="ano-classe" placeholder="2"> 
-                    <label for="turma-classe">Turma</label>
-                    <input type="text" id="turma-classe" placeholder="B" />
+        <div class="content">
+            <div class="nes-container with-title borda1">
+                <div class="nes-container with-title borda2">
+                    <div class="nes-container with-title borda3">
+                        <div class="telatotal">
+                            <section class="sessaoprimeira">
+                                <h2>Cadastro da Turma e Aluno</h2>
+
+                                <div class="anoturma">
+                                    <div class="nes-field">
+                                        <label for="ano-classe">Ano</label>
+                                        <input
+                                            type="text"
+                                            id="ano-classe"
+                                            class="nes-input"
+                                            placeholder="Ano da Turma"
+                                        />
+                                    </div>
+                                    <div class="nes-field">
+                                        <label for="turma-classe">Turma</label>
+                                        <input
+                                            type="text"
+                                            id="turma-classe"
+                                            class="nes-input"
+                                            placeholder="Serie da Turma"
+                                        />
+                                    </div>
+                                </div>
+
+                                <h2>Alunos</h2>
+
+                                <div class="inforaluno">
+                                    <div class="nomeera">
+                                        <div class="nes-field">
+                                            <label for="nome-do-aluno"
+                                                >Nome do Aluno</label
+                                            >
+                                            <input
+                                                type="text"
+                                                id="nome-do-aluno"
+                                                class="nes-input"
+                                                required
+                                                placeholder="Nome do Aluno"
+                                            />
+                                        </div>
+
+                                        <div class="nes-field">
+                                            <label for="RA"
+                                                >Registro Academico</label
+                                            >
+                                            <input
+                                                type="text"
+                                                id="RA"
+                                                class="nes-input"
+                                                required
+                                                placeholder="Registro Academico"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="emaileanotacoes">
+                                        <div class="nes-field">
+                                            <label for="e-mail">E-mail</label>
+                                            <input
+                                                type="email"
+                                                id="e-mail"
+                                                class="nes-input"
+                                                required
+                                                placeholder="E-mail"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <!-- problemas com o tamanho e alinhamento do campo anotações (tag textarea) -->
+
+                                    <label for="anotacoes">Anotações</label>
+                                    <textarea
+                                        id="anotacoes"
+                                        class="nes-textarea"
+                                        placeholder="Diagonosticado com..."
+                                    ></textarea>
+                                </div>
+                                <div>
+                                    <a
+                                        class="nes-btn"
+                                        onclick="adicionarAluno()"
+                                        >Adicionar Aluno</a
+                                    >
+                                    <a
+                                        class="nes-btn"
+                                        onclick="corrigirCadastroAluno()"
+                                        >Corrigir Cadastro</a
+                                    >
+                                </div>
+                            </section>
+                        </div>
+                    </div>
                 </div>
-                <h4>Alunos</h4>
-                <div>
-                    <label for="nome-do-aluno">Nome do aluno</label>
-                    <input
-                        type="text"
-                        id="nome-do-aluno"
-                        placeholder="Jorge de Jorge"
-                        required
-                    />
-                    <label for="RA">RA</label>
-                    <input type="text" id="RA" />
-                    <label for="e-mail">E-mail</label>
-                    <input
-                        type="email"
-                        id="e-mail"
-                        placeholder="jorge@jorge.com"
-                        required
-                    />
-                    <!-- problemas com o tamanho e alinhamento do campo anotações (tag textarea) -->
-                    <label for="anotacoes">Anotações</label>
-                    <input
-                        name="anotacoes"
-                        id="anotacoes"
-                        placeholder="Diagonosticado com..."
-                    />
+            </div>
+            <div class="turmacadastrada">
+                <div class="nes-container with-title borda1">
+                    <div class="nes-container with-title borda2">
+                        <div class="nes-container with-title borda3">
+                            <section class="exibicaoturma">
+                                <h3>Turmas Cadastrada</h3>
+                                <!-- O professor seleciona a turma e clicaria para exibir a turma com todos os alunos cadastrados-->
+                                <div id="">
+                                    <label for="turmas">Escolha a turma</label>
+                                    <select
+                                        name="turmas"
+                                        id="turmas-lista"
+                                        placeholder="Turma A 2022"
+                                        required
+                                    >
+                                        <option value="">Turma Teste</option>
+                                    </select>
+                                </div>
+                                <div id="turmas"></div>
+                                <section class="botoesfinais">
+                                    <div class="botaoexibir">
+                                        <a
+                                            class="nes-btn is-success"
+                                            onclick="exibirTurma()"
+                                            >Exibir Turma</a
+                                        >
+                                    </div>
+                                    <div id="retorno"></div>
+                                    <a
+                                        class="nes-btn"
+                                        id="botaovoltar"
+                                        href="./menu-inicial.html"
+                                        >Voltar</a
+                                    >
+                                </section>
+                            </section>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <button onclick="adicionarAluno()">Adicionar Aluno</button>
-                    <button onclick="corrigirCadastroAluno()">
-                        Corrigir Cadastro
-                    </button>
-                </div>
-                <div id="retorno"></div>
-            </section>
-            <section>
-                <h3>Turmas Cadastrada</h3>
-                <!-- O professor seleciona a turma e clicaria para exibir a turma com todos os alunos cadastrados-->
-                <div id="">
-                    <label for="turmas">Escolha a turma</label>
-                    <select
-                        name="turmas"
-                        id="turmas-lista"
-                        placeholder="Turma A 2022"
-                        required
-                    >
-                        <option value="">Turma Teste</option>
-                    </select>
-                </div>
-                <div>
-                    <button onclick="exibirTurma()">Exibir Turma</button>
-                    <p id=""></p>
-                </div>
-                <div id="turmas"></div>
-                <a class="nes-btn" href="./menu-inicial.html">Voltar</a>
-            </section>
-        </main>
+            </div>
+        </div>
         <script src="./estruturaClasseAluno.js"></script>
         <script src="./bancodedados.js"></script>
         <script src="./cadastroDaTurma.js"></script>
