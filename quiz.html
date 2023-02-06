@@ -8,6 +8,8 @@
         <title>Jogando</title>
         <link rel="stylesheet" href="./css/nes.css" />
         <link rel="stylesheet" href="./css/quiz.css" />
+        <audio src="./sons/resposta-certa.mp3" id="som-correto"></audio>
+        <audio src="./sons/resposta-errada.mp3" id="som-errado"></audio>
     </head>
     <body>
         <div class="content">
@@ -36,25 +38,25 @@
                                                 id="a"
                                                 value="1A"
                                                 class="respostas"
-                                                onClick="verificarSeAcertou(this, this)"
+                                                onClick="verificarSeAcertou(this, 0)"
                                             ></li>
                                             <li
                                                 id="b"
                                                 value="1B"
                                                 class="respostas"
-                                                onClick="verificarSeAcertou(this, this)"
+                                                onClick="verificarSeAcertou(this, 1)"
                                             ></li>
                                             <li
                                                 id="c"
                                                 value="1C"
                                                 class="respostas"
-                                                onClick="verificarSeAcertou(this, this)"
+                                                onClick="verificarSeAcertou(this, 2)"
                                             ></li>
                                             <li
                                                 id="d"
                                                 value="1D"
                                                 class="respostas"
-                                                onClick="verificarSeAcertou(this, this)"
+                                                onClick="verificarSeAcertou(this, 3)"
                                             ></li>
                                         </ol>
                                     </div>
@@ -74,7 +76,9 @@
             </div>
         </div>
         <!-- JS externo -->
+     
     </body>
 </html>
 <script src="./bancodedados.js"></script>
 <script src="./quizz.js"></script>
+<script src="./index.js"></script>
