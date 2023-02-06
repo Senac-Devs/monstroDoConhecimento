@@ -15,6 +15,20 @@ function salvarPergunta() {
     const elementoTema = document.getElementById("temapergunta");
     const temaPergunta = elementoTema.options[elementoTema.selectedIndex].value;
 
+    if (
+        enunciado === "" ||
+        alternativaCorreta === "" ||
+        alternaticaErrada1 === "" ||
+        temaPergunta === ""
+    ) {
+        alert(
+            "Faltam informações essenciais. Preencha corretamente os campos de pergunta e de tema da pergunta para prosseguir!"
+        );
+        return false
+    } else {
+        salvarPergunta()
+    }
+
     bancoDados.transaction(function (inserir) {
         inserir.executeSql(
             "INSERT INTO perguntas (enunciado, alternativaCorreta, alternaticaErrada1, alternaticaErrada2, alternaticaErrada3, palavraChave, tema) VALUES (?  ,?  ,?  ,?  ,?  ,?  ,? )",
@@ -29,5 +43,11 @@ function salvarPergunta() {
             ]
         );
     });
-    document.getElementById("cadastro-de-pergunta").innerHTML = "";
+    document.getElementById("cadastro-de-pergunta").value = "";
+    document.getElementById("alternativa-certa").value = "";
+    document.getElementById("alternativa-errada1").value = "";
+    document.getElementById("alternativa-errada2").value = "";
+    document.getElementById("alternativa-errada3").value = "";
+    document.getElementById("palavraChave").value = "";
+    document.getElementById("temapergunta").value = "";
 }
