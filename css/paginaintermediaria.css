@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 
 * {
     margin-left: 100px;
     margin-right: 100px;
     font-family: "Roboto", sans-serif;
     font-size: 1.25rem;
+    font-family: "Press Start 2P";
 }
 body {
     width: 100%;
@@ -37,13 +37,16 @@ body {
     border-bottom-width: 10px;
 }
 .nes-btn {
-    width: 250px;
+    width: 290px;
     height: 90px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+
 }
 .content div {
     height: auto;
     margin: 0px;
-    padding: 0px;
 }
 
 .nes-container.with-title > .title {
@@ -90,10 +93,14 @@ h1 {
     flex-direction: row-reverse;
 }
 .botoespergunta {
+
     margin-top: 50px;
     align-items: flex-start;
+
 }
 .botaotema {
+    margin-top: 20px;
+    height: 80px ;
     margin-right: 100mm;
 }
 @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
@@ -125,3 +132,4 @@ h1 {
     -moz-appearance: none;
     appearance: none;
 }
+
