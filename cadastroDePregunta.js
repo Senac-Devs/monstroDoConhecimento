@@ -25,8 +25,6 @@ function salvarPergunta() {
             "Faltam informações essenciais. Preencha corretamente os campos de pergunta e de tema da pergunta para prosseguir!"
         );
         return false
-    } else {
-        salvarPergunta()
     }
 
     bancoDados.transaction(function (inserir) {
