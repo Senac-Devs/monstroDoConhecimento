@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 * {
     margin-left: 100px;
     margin-right: 100px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-family: "Press Start 2P";
 }
 body {
     background-color: grey;
@@ -38,8 +42,9 @@ body {
     text-align: center;
 }
 .main-central {
-    align-items:flex-start;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 .row{
