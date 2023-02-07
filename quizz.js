@@ -4,22 +4,35 @@ bancoDados.transaction(function (exibe) {
         [],
         function (exibe, resultados) {
             const listaPerguntas = [];
-            for (let i = 0; i < resultados.rows.length; i++){
-                listaPerguntas.push(resultados.rows.item(i))
+            for (let i = 0; i < resultados.rows.length; i++) {
+                listaPerguntas.push(resultados.rows.item(i));
             }
-            organizaPerguntas(listaPerguntas)
+            organizaPerguntas(listaPerguntas);
         }
     );
 });
 
-function organizaPerguntas(listaPerguntas){
-    const cookie = pegaCookie()
+//let tempoInicial = new Date()
+
+
+function organizaPerguntas(listaPerguntas) {
+    const cookie = pegaInfoNoCookie();
     const perguntaAleatoria = listaPerguntas.sort(() => Math.random() - 0.5);
-    if (cookie.numeroQuestao == 0){
-        listaPerguntas.forEach((e)=> cookie["listaQuestoes"].push(e))
+    if (cookie.numeroQuestao == 0) {
+        for (let i = 0; i < perguntaAleatoria.length; i++) {
+            console.log(perguntaAleatoria, cookie.listaQuestoes)
+            cookie.listaQuestoes.length==perguntaAleatoria.length
+                ? null
+                : cookie.listaQuestoes.push(perguntaAleatoria[i]);
+        }
+        defineCookie(cookie);
+        //listaPerguntas.forEach((e)=> cookie["listaQuestoes"].push(e))
     }
-    console.log(cookie)
-    exibePergunta(resultados.rows.item(perguntaAleatoria));
+    console.log(cookie);
+    exibePergunta(
+        cookie.listaQuestoes[cookie.numeroQuestao],
+        cookie.numeroQuestao
+    );
 }
 
 let idCorreto;
@@ -36,8 +49,7 @@ function tocarSomErrado() {
     somErrado.play();
 }
 
-let numPergunta = 1;
-function exibePergunta(pergunta) {
+function exibePergunta(pergunta, numPergunta) {
     const nomeQuestionario = document.getElementById("titulo-questionario");
     const numeroQuestao = document.getElementById("numQuestao");
     const enunciado = document.getElementById("pergunta");
@@ -47,7 +59,7 @@ function exibePergunta(pergunta) {
     const alternativaD = document.getElementById("d");
 
     nomeQuestionario.innerText = pergunta.tema;
-    numeroQuestao.innerText = numPergunta; 
+    numeroQuestao.innerText = numPergunta + 1;
     enunciado.innerText = pergunta.enunciado;
     const listaAlternativas = [
         pergunta.alternativaCorreta,
@@ -68,20 +80,30 @@ let permissaoResponder = true;
 
 //POSSÍVEL PROBLEMA, o usuário poderia ficar apertando f5 para dar refresh
 //na página e refazer até acertar.
-function verificarSeAcertou(eleAlternativa, idAlternativa) {
+function verificarSeAcertou(eleAlternativa, idAlternativa, cookie) {
+    cookie = pegaInfoNoCookie();
     if (permissaoResponder) {
         if (idCorreto == idAlternativa) {
             eleAlternativa.style.backgroundColor = "lightgreen";
             tocarSomCerto();
+            cookie.acertos++;
         } else {
             eleAlternativa.style.backgroundColor = "lightcoral";
             tocarSomErrado();
         }
+        //let tempoResposta = new Date() - tempoInicial;
         permissaoResponder = false;
-        numPergunta++;
+        console.log(cookie);
+        cookie.numeroQuestao++;
+
+       setTimeout(function () {
+        if(cookie.listaQuestoes.length == cookie.numeroQuestao){
+            window.location.href = "./paginaintermediaria.html"
+        } else {
+            location.reload();
+        }
+    }, 1500);
     }
+    defineCookie(cookie);
 }
 
-function proximaQuestao(resultadorowsitem) {
-
-}
