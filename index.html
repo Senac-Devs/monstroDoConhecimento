@@ -71,8 +71,8 @@
                                         >
                                             Selecione
                                         </option>
-                                        <option value="0">Aluno</option>
-                                        <option value="1">Professor</option>
+                                        <option value="Aluno">Aluno</option>
+                                        <option value="Professor">Professor</option>
                                     </select>
                                 </div>
                                 <div class="texto-padrao nes-field">
@@ -81,6 +81,7 @@
                                         type="text"
                                         id="name_field"
                                         class="nes-input"
+                                       name="Usuario"
                                     />
                                 </div>
                                 <div class="texto-padrao nes-field">
@@ -89,15 +90,9 @@
                                         type="password"
                                         id="name_field"
                                         class="nes-input"
+                                        name="Senha"
                                     />
-
-                                    <a
-                                        href="menu-inicial.html"
-                                        <button
-                                        class="nes-btn is-success"
-                                    >
-                                        Login
-                                    </a>
+                                    <button class="nes-btn is-success" onclick="login()">Login</button>
                                 </div>
                             </div>
                         </div>
@@ -122,4 +117,5 @@
             </div>
         </div>
     </body>
+    <script src="./login.js"></script>
 </html>
