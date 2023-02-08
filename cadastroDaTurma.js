@@ -14,7 +14,7 @@ gerar um número baseado em uma estrutura*/
 function adicionarAluno() {
     
     let anoClasse = entradaAno.value;
-    let turmaClasse = entradaTurma.value;
+    let turmaClasse = (entradaTurma.value.toUpperCase());
     let nomeDoAluno = entradaNomeDoAluno.value;
     let emailAluno = entradaEmail.value;
     let anotacoesAluno = entradaAnotacoes.value;
