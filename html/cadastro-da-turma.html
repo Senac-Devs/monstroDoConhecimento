@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Cadastro da Turma</title>
-        <link rel="stylesheet" href="./css/nes.css" />
-        <link rel="stylesheet" href="./css/cadastro-da-turma.css" />
+        <link rel="stylesheet" href="../css/nes.css" />
+        <link rel="stylesheet" href="../css/cadastro-da-turma.css" />
     </head>
     <body>
         <div class="content">
@@ -137,7 +137,7 @@
                                     <a
                                         class="nes-btn"
                                         id="botaovoltar"
-                                        href="./menu-inicial.html"
+                                        href="../html/menuProfessor.html"
                                         >Voltar</a
                                     >
                                 </section>
@@ -145,38 +145,10 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <button onclick="adicionarAluno()">Adicionar Aluno</button>
-                    <button onclick="corrigirCadastroAluno()">
-                        Corrigir Cadastro
-                    </button>
-                </div>
-                <div id="retorno"></div>
-                <section>
-                    <h3>Turmas Cadastrada</h3>
-                    <!-- O professor seleciona a turma e clicaria para exibir a turma com todos os alunos cadastrados-->
-                    <div id="">
-                        <label for="turmas">Escolha a turma</label>
-                        <select
-                            name="turmas"
-                            id="turmas-lista"
-                            placeholder="Turma A 2022"
-                            required
-                        >
-                            <option value="">Turma Teste</option>
-                        </select>
-                    </div>
-                    <div>
-                        <button onclick="exibirTurma()">Exibir Turma</button>
-                        <p id=""></p>
-                    </div>
-                    <div id="turmas"></div>
-                    <a class="nes-btn" href="./menuProfessor.html">Voltar</a>
-                </section>
             </div>
         </div>
-        <script src="./estruturaClasseAluno.js"></script>
-        <script src="./bancodedados.js"></script>
-        <script src="./cadastroDaTurma.js"></script>
+        <script src="../js/estruturaClasseAluno.js"></script>
+        <script src="../js/bancodedados.js"></script>
+        <script src="../js/cadastroDaTurma.js"></script>
     </body>
 </html>
