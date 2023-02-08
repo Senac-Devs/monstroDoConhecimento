@@ -7,12 +7,19 @@
     font-family: "Press Start 2P";
 }
 body {
-    background-color: grey;
+    width: 100%;
+    height: 100%;
+    background: grey;
 }
 .content {
     background-color: grey;
 }
 
+.tela-principal {
+    margin: 0;
+    width: 94%;
+    height: 100%;
+}
 .borda1 {
     width: 90mm 1mm;
     border-color: black;
@@ -37,35 +44,63 @@ body {
     border-top-width: 10px;
     border-bottom-width: 10px;
 }
-
-
-.nes-container.with-title > .title {
-    background-color: gold;
-    border-style: solid;
-    border-color: black;
-}
 .content div {
+    width: auto;
+    height: 100%;
     margin: 0px;
-    padding: 0px;
-    text-align: center;
+}
+.main {
+    margin: 0;
+    width: 100%;
+    height: 100%;
 }
 
+.telatotal {
+    display: block;
+}
+
+.emails1 {
+    display: flex;
+    margin-top: 15px;
+}
+.emails2 {
+    background-color: azure;
+    display: flex;
+    margin-top: 15px;
+}
+.gmails {
+    text-align: justify;
+}
+
+.centralizacao {
+    display: flexbox;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.esquerda-imagem {
+    width: 150px;
+    height: 150px;
+}
+.voltar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+}
 .nes-btn {
-    width: 20vw;
-    height: 100px;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
+    width: 15vw;
+    height: 40px;
+}
+.centralizacao {
+    margin: 0;
+    display: inline-flex;
 }
 
-.cartao-central-imagem {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.subcentralizacao{
+margin: 0;
 }
-
-.main-central {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+.emailreal{
+    margin: 0%;
 }

@@ -4,7 +4,9 @@ bancoDados.transaction(function (criar) {
     criar.executeSql("CREATE TABLE alunos (infos JSON)");
 });
 bancoDados.transaction(function (criar) {
-    criar.executeSql("CREATE TABLE perguntas (enunciado TEXT, alternativaCorreta TEXT, alternaticaErrada1 TEXT,alternaticaErrada2 TEXT, alternaticaErrada3 TEXT, palavraChave TEXT, tema TEXT)");
+    criar.executeSql(
+        "CREATE TABLE perguntas (enunciado TEXT, alternativaCorreta TEXT, alternaticaErrada1 TEXT,alternaticaErrada2 TEXT, alternaticaErrada3 TEXT, palavraChave TEXT, tema TEXT)"
+    );
 });
 
 function inserirAlunoBD() {
@@ -19,8 +21,10 @@ function inserirAlunoBD() {
     }
 }
 
-function avisa(){
-    alert('Já existe um aluno com o mesmo nome cadastrado. Desaja professoguir?')
+function avisa() {
+    alert(
+        "Já existe um aluno com o mesmo nome cadastrado. Desaja professoguir?"
+    );
 }
 
 function confereAlunoRepetido(alunoParaInserir) {
@@ -42,14 +46,12 @@ function confereAlunoRepetido(alunoParaInserir) {
                     );
                     if (aluno.nome == alunoParaInserir) {
                         console.log(aluno.nome);
-                        avisa()
+                        avisa();
                     }
                 }
             }
         );
-
     });
-    
 }
 
 function salvarAluno(aluno) {
@@ -108,7 +110,7 @@ function exibeOrdemAlfabetica() {
 function exibeAlunoHMTL(aluno) {
     document.getElementById(
         "turmas"
-    ).innerHTML += `<p><strong>Nome</strong>: ${aluno.nome} <strong>RA</strong>: ${aluno.RA} <strong>email</strong>: ${aluno.email} <strong>Anotações</strong>: ${aluno.anotacoes} </p>`;
+    ).innerHTML += `<div class="paragrafo"><span class="infoaluno"><strong>Nome</strong>: ${aluno.nome}</span> <span class="infoaluno"><strong>RA</strong>: ${aluno.RA}</span> <span class="infoaluno"><strong>email</strong>: ${aluno.email}</span> <span class="infoaluno"><strong>Anotações</strong>: ${aluno.anotacoes}</span> <p></p> </div>`;
 }
 
 let anoTurmaInserir = [];
@@ -136,4 +138,3 @@ function carregaAnoTurma() {
         );
     });
 }
-
