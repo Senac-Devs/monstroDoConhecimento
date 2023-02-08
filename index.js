@@ -36,3 +36,13 @@ function limpaCookie(cookie) {
         "=;" +
         "expires=Thu, 01 Jan 1970 00:00:00 UTC;";
 }
+
+function jogarComQuestoes(tema) {
+    console.log(tema)
+    const temaEscolhido = {"temaEscolhido": tema}
+
+    localStorage.setItem('jsonObj', JSON.stringify(temaEscolhido))
+    window.location.href = "./quiz.html"
+    const temaRetornado = JSON.parse(localStorage.getItem('jsonObj'));
+    console.log(temaRetornado)
+}
