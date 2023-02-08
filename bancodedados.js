@@ -138,3 +138,42 @@ function carregaAnoTurma() {
         );
     });
 }
+function confereSeEnunciadoDuplicado(pergunta) {
+    bancoDados.transaction(function (ler) {
+        ler.executeSql(
+            `SELECT enunciado FROM perguntas WHERE enunciado='${pergunta[0]}'`,
+            [],
+            function (ler, resultado) {
+                console.log(resultado.rows.length);
+                if(resultado.rows.length == 0){
+                    insereQuestaoBD(pergunta[0],pergunta[1],pergunta[2],pergunta[3],pergunta[4],pergunta[5],pergunta[6])
+                }
+            }
+        );
+    });
+}
+
+function insereQuestaoBD(
+    enunciado,
+    alternativaCorreta,
+    alternaticaErrada1,
+    alternaticaErrada2,
+    alternaticaErrada3,
+    palavraChave,
+    temaPergunta
+) {
+    bancoDados.transaction(function (inserir) {
+        inserir.executeSql(
+            "INSERT INTO perguntas (enunciado, alternativaCorreta, alternaticaErrada1, alternaticaErrada2, alternaticaErrada3, palavraChave, tema) VALUES (?  ,?  ,?  ,?  ,?  ,?  ,? )",
+            [
+                enunciado,
+                alternativaCorreta,
+                alternaticaErrada1,
+                alternaticaErrada2,
+                alternaticaErrada3,
+                palavraChave,
+                temaPergunta,
+            ]
+        );
+    });
+}

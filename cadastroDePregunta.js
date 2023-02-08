@@ -24,23 +24,18 @@ function salvarPergunta() {
         alert(
             "Faltam informações essenciais. Preencha corretamente os campos de pergunta e de tema da pergunta para prosseguir!"
         );
-        return false
+        return false;
     }
+    insereQuestaoBD(
+        enunciado,
+        alternativaCorreta,
+        alternaticaErrada1,
+        alternaticaErrada2,
+        alternaticaErrada3,
+        palavraChave,
+        temaPergunta
+    );
 
-    bancoDados.transaction(function (inserir) {
-        inserir.executeSql(
-            "INSERT INTO perguntas (enunciado, alternativaCorreta, alternaticaErrada1, alternaticaErrada2, alternaticaErrada3, palavraChave, tema) VALUES (?  ,?  ,?  ,?  ,?  ,?  ,? )",
-            [
-                enunciado,
-                alternativaCorreta,
-                alternaticaErrada1,
-                alternaticaErrada2,
-                alternaticaErrada3,
-                palavraChave,
-                temaPergunta,
-            ]
-        );
-    });
     document.getElementById("cadastro-de-pergunta").value = "";
     document.getElementById("alternativa-certa").value = "";
     document.getElementById("alternativa-errada1").value = "";
@@ -49,3 +44,5 @@ function salvarPergunta() {
     document.getElementById("palavraChave").value = "";
     document.getElementById("temapergunta").value = "";
 }
+
+
