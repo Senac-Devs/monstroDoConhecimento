@@ -11,11 +11,30 @@ body {
 }
 
 .esquerda-login-imagem {
-    align-items: center;
+    align-items: baseline;
     padding: 0;
     margin: 0;
     width: 13%;
 }
+.esquerda-login-imagem-ovo {
+    align-items:baseline;
+    padding: 0;
+    margin: 0;
+    width: 7%;
+}
+.esquerda-login-imagem-medio {
+    align-items: baseline;
+    padding: 0;
+    margin: 0;
+    width: 10%;
+}
+.esquerda-login-imagem-adulto {
+    align-items: baseline;
+    padding: 0;
+    margin: 0;
+    width: 13%;
+}
+
 .imagensdocentro {
     display: flex;
     justify-content: center;

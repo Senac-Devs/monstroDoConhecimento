@@ -1,6 +1,7 @@
 bancoDados.transaction(function (exibe) {
+    const tema = JSON.parse(localStorage.getItem('jsonObj'));
     exibe.executeSql(
-        "SELECT * FROM perguntas",
+        `SELECT * FROM perguntas WHERE tema="${tema.temaEscolhido}"`,
         [],
         function (exibe, resultados) {
             const listaPerguntas = [];
@@ -98,6 +99,7 @@ function verificarSeAcertou(eleAlternativa, idAlternativa, cookie) {
 
        setTimeout(function () {
         if(cookie.listaQuestoes.length == cookie.numeroQuestao){
+            carregaCookie()
             window.location.href = "./paginaintermediaria.html"
         } else {
             location.reload();
