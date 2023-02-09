@@ -6,7 +6,7 @@ const questoesPadrao = [
     ["Dê o coletivo de lenha, cabra e chave, respectivamente.", "Talha, fato e molho", "Alcateia, fato e molho", "Talha, enxame e molho", "Talha, fato e banda", "coletivos", "Português"],
     ["Qual é o nome dos versos que possuem métrica, mas não utilizam rimas?", "Versos brancos", "Versos bárbaros", "Versos irregulares", "Versos vermelhos", "poesia", "Português"],
     ["Qual o ano de promulgação da atual Constituição Federal da República Federativa do Brasil?", "1988", "1990", "1964", "2002", "direito", "História"],
-    ["Em que ano começou e terminou a 2ª Guerra Mundial?", "1939-1945", "1938-1946", "1938-1945", "Isaac 1939-1946", "guerra", "História"],
+    ["Em que ano começou e terminou a 2ª Guerra Mundial?", "1939-1945", "1938-1946", "1938-1945", "1939-1946", "guerra", "História"],
     ["O período do movimento iluminista também é conhecido por:", "Século das Luzes", "Século das Trevas", "Século dos Pensadores", "Século da Energia Elétrica", "filosofia", "História"],
     ["Qual o menor país do mundo?", "Vaticano", "Mônaco", "San Marino", "Campo Mourão", "países", "Geografia"],
     ["Que país tem formato de uma bota?", "Itália", "Portugal", "México", "Brasil", "países", "Geografia"],
