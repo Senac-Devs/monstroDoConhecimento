@@ -5,7 +5,7 @@ function login() {
         var usuario = document.getElementsByName("Usuario")[0].value;
         var senha = document.getElementsByName("Senha")[0].value;
         if (usuario == "professor" && senha == "professor") {
-            window.location.href = "../html/menuProfessor.html";
+            window.location.href = "./html/menuProfessor.html";
             done = 1;
         }
         if (done == 0) {
@@ -16,7 +16,7 @@ function login() {
         var usuario = document.getElementsByName("Usuario")[0].value;
         var senha = document.getElementsByName("Senha")[0].value;
         if (usuario == "aluno" && senha == "aluno") {
-            window.location.href = "../html/menuAluno.html";
+            window.location.href = "./html/menuAluno.html";
             done = 1;
         }
         if (done == 0) {
