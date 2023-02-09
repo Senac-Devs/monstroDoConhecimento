@@ -1,3 +1,3 @@
 # monstroDoConhecimento
 Jogue, Aprenda e Evolua com seu Monstro!
-Senhas aluno123 e professor123
+Senhas alunosenac e professorsenac

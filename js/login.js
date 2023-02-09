@@ -4,7 +4,7 @@ function login() {
         var done = 0;
         var usuario = document.getElementsByName("Usuario")[0].value;
         var senha = document.getElementsByName("Senha")[0].value;
-        if (usuario == "professor" && senha == "professor123") {
+        if (usuario == "professor" && senha == "professorsenac") {
             window.location.href = "./html/menuProfessor.html";
             done = 1;
         }
@@ -15,7 +15,7 @@ function login() {
         var done = 0;
         var usuario = document.getElementsByName("Usuario")[0].value;
         var senha = document.getElementsByName("Senha")[0].value;
-        if (usuario == "aluno" && senha == "aluno123") {
+        if (usuario == "aluno" && senha == "alunosenac") {
             window.location.href = "./html/menuAluno.html";
             done = 1;
         }

@@ -44,7 +44,6 @@
                                         class="esquerda-login-imagem-adulto"
                                         alt="dragaoadulto"
                                     />
-
                                 </div>
                             </div>
                         </div>
@@ -57,44 +56,54 @@
                         <span class="title">Login</span>
                         <div class="direita-login">
                             <div class="cartao-login">
-                                <label for="default_select">Usuario</label>
-                                <div class="nes-select">
-                                    <select
-                                        required
-                                        id="default_select"
-                                        class="selection"
-                                    >
-                                        <option
-                                            value="Selecione"
-                                            disabled
-                                            selected
-                                            hidden
+                                <form onsubmit="return false">
+                                    <label for="default_select">Usuario</label>
+                                    <div class="nes-select">
+                                        <select
+                                            required
+                                            id="default_select"
+                                            class="selection"
                                         >
-                                            Selecione
-                                        </option>
-                                        <option value="Aluno">Aluno</option>
-                                        <option value="Professor">Professor</option>
-                                    </select>
-                                </div>
-                                <div class="texto-padrao nes-field">
-                                    <label for="name_field">Nome</label>
-                                    <input
-                                        type="text"
-                                        id="name_field"
-                                        class="nes-input"
-                                       name="Usuario"
-                                    />
-                                </div>
-                                <div class="texto-padrao nes-field">
-                                    <label for="name_field">Senha</label>
-                                    <input
-                                        type="password"
-                                        id="name_field"
-                                        class="nes-input"
-                                        name="Senha"
-                                    />
-                                    <button class="nes-btn is-success" onclick="login()">Login</button>
-                                </div>
+                                            <option
+                                                value="Selecione"
+                                                disabled
+                                                selected
+                                                hidden
+                                            >
+                                                Selecione
+                                            </option>
+                                            <option value="Aluno">Aluno</option>
+                                            <option value="Professor">
+                                                Professor
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="texto-padrao nes-field">
+                                        <label for="name_field">Nome</label>
+                                        <input
+                                            type="text"
+                                            id="name_field"
+                                            class="nes-input"
+                                            name="Usuario"
+                                        />
+                                    </div>
+                                    <div class="texto-padrao nes-field">
+                                        <label for="name_field">Senha</label>
+                                        <input
+                                            type="password"
+                                            id="name_field"
+                                            class="nes-input"
+                                            name="Senha"
+                                        />
+                                        <button
+                                            class="nes-btn is-success"
+                                            onclick="login()"
+                                            type="submit"
+                                        >
+                                            Login
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -110,7 +119,9 @@
                                     Contato dos desenvolvedores nos icones a
                                     baixo
                                 </h3>
-                                <a class="nes-btn" href="./html/emails.html">Emails</a>
+                                <a class="nes-btn" href="./html/emails.html"
+                                    >Emails</a
+                                >
                             </section>
                         </div>
                     </div>
