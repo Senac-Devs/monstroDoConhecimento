@@ -22,3 +22,6 @@ const questoesPadrao = [
 questoesPadrao.forEach(
     (q) => confereSeEnunciadoDuplicado(q)
 )
+
+atualizaHumor()
+carregaCookie()

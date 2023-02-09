@@ -51,7 +51,7 @@ function tocarSomErrado() {
 }
 
 function exibePergunta(pergunta, numPergunta) {
-    console.log(pergunta)
+    console.log('pergunta', pergunta, numPergunta)
     const nomeQuestionario = document.getElementById("titulo-questionario");
     const numeroQuestao = document.getElementById("numQuestao");
     const enunciado = document.getElementById("pergunta");

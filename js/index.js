@@ -58,5 +58,3 @@ function atualizaHumor() {
     console.log(prog, cookie);
     document.getElementById("humor").value = prog;
 }
-
-atualizaHumor();
