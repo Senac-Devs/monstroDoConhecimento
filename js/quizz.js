@@ -101,7 +101,7 @@ function verificarSeAcertou(eleAlternativa, idAlternativa, cookie) {
        setTimeout(function () {
         if(cookie.listaQuestoes.length == cookie.numeroQuestao){
             carregaCookie()
-            window.location.href = "./paginaintermediaria.html"
+            window.location.href = "../html/paginaintermediaria.html"
         } else {
             location.reload();
         }

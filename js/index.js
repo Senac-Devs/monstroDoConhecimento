@@ -42,7 +42,7 @@ function jogarComQuestoes(tema) {
     const temaEscolhido = {"temaEscolhido": tema}
 
     localStorage.setItem('jsonObj', JSON.stringify(temaEscolhido))
-    window.location.href = "./quiz.html"
+    window.location.href = "../html/quiz.html"
     const temaRetornado = JSON.parse(localStorage.getItem('jsonObj'));
     console.log(temaRetornado)
 }
